@@ -1,7 +1,12 @@
-from fastapi import APIRouter
+from fastapi import APIRouter, HTTPException
+from core.agent.recipe_agent import recipe_agent, Preference
 
 router = APIRouter(prefix="/recipes", tags=["Recipes"])
 
-@router.get("/generate")
-def generate_recipe():
-    return {"message": "Recipe generation coming soon!"}
+@router.post("/generate")
+async def generate_recipe_route(pref: Preference):
+    try:
+        recipe = await recipe_agent.generate_recipe(pref)
+        return recipe
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
