@@ -63,7 +63,11 @@ Reusability	Core logic can be reused across different projects or APIs.
 Scalability	Easy to expand with new features like memory, RAG, or multi-agent flow.
 Maintainability	Cleaner code, easier debugging and testing.
 
-Phase 1: Folder structure
-Phase 2: Fast API - basic setup and testing
-Phase 3: Recipe Geneartor and actual Fast API end points and connecting OpenAI. Tested via swagger
-Phase 4: Add streamlit app
+**Phase 1:** Folder structure
+--
+**Phase 2:** Fast API - basic setup and testing
+--
+**Phase 3:** Recipe Geneartor and actual Fast API end points and connecting OpenAI. Tested via swagger
+--
+**Phase 4:** Added streamlit app
+--
